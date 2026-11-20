@@ -1,0 +1,28 @@
+doctype html
+html
+    head
+        title= title
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet" href="/css/style.css")
+    body
+        header.page-header
+            h1 Livestock Lots
+            a.cta(href="/update-cobj") Add to this table
+        if error
+            p.error #{error}
+        table.records
+            thead
+                tr
+                    th Name
+                    th Kind
+                    th Weight (lbs)
+            tbody
+                if data && data.length
+                    each lot in data
+                        tr
+                            td= lot.properties.name
+                            td= lot.properties.kind
+                            td= lot.properties.weight
+                else
+                    tr
+                        td(colspan="3") No livestock lots yet. Use “Add to this table” to create one.

@@ -51,8 +51,70 @@ input[type="text"] {
 }
 
 input[type="submit"] {
-    background-color: lightgrey;
+    background-color: #ff7a59;
+    color: #fff;
     border: none;
     padding: .375rem 1rem;
     margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+input[type="number"] {
+    padding: .25rem;
+}
+
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    background: #2d3e50;
+    color: #fff;
+}
+
+.page-header h1 {
+    margin: 0;
+}
+
+.page-header a,
+.cta {
+    color: #fff;
+    font-weight: 600;
+}
+
+.cta {
+    background-color: #ff7a59;
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+}
+
+.error {
+    margin: 1rem 1.5rem;
+    color: #b00020;
+}
+
+table.records {
+    width: calc(100% - 3rem);
+    margin: 1.5rem auto;
+    border-collapse: collapse;
+    box-shadow: 3px 2px 6px lightgrey;
+}
+
+table.records th,
+table.records td {
+    border: 1px solid #ddd;
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+table.records th {
+    background: #ff7a59;
+    color: #fff;
+}
+
+table.records tbody tr:nth-child(even) {
+    background: #f7f7f7;
 }

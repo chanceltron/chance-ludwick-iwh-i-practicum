@@ -1,0 +1,22 @@
+doctype html
+html
+    head
+        title= title
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet" href="/css/style.css")
+    body
+        header.page-header
+            h1 Add a livestock lot
+            a(href="/") Return to the homepage
+        if error
+            p.error #{error}
+        .form-wrapper
+            p Create a new Livestock Lot custom object record in HubSpot.
+            form(method="POST" action="/update-cobj")
+                label(for="name") Name
+                input#name(type="text" name="name" required placeholder="58 Feeder Steers 875#")
+                label(for="kind") Kind
+                input#kind(type="text" name="kind" required placeholder="Steers")
+                label(for="weight") Weight (lbs)
+                input#weight(type="number" name="weight" required min="1" placeholder="875")
+                input(type="submit" value="Create lot")
